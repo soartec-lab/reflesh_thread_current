@@ -22,7 +22,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem provides a rack middleware RefreshThreadCurrent::Middlewarewhich set all thread local vriable and fiber local variable be nil in each rack request, which results in refreshing all thread local variables in each rack request.
+
+NOTE: refresh_thread_current work on unicorn server. does not work with puma, and webrick server in rails 5 and 6.
+
+```config/application.rb:ruby
+class Application < Rails::Application
+  config.middleware.insert_before ActionDispatch::Executor,
+    RefreshThreadCurrent::Middleware
+end
+```
+
+Middleware check.
+
+```
+$ bundle exec rake middleware
+```
+
+Use unicorn server to run your application.
 
 ## Development
 
