@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "reflesh_thread_current"
+require "refresh_thread_current"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

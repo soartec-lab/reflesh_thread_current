@@ -1,25 +1,25 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "reflesh_thread_current/version"
+require "refresh_thread_current/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "reflesh_thread_current"
-  spec.version       = RefleshThreadCurrent::VERSION
+  spec.name          = "refresh_thread_current"
+  spec.version       = RefreshThreadCurrent::VERSION
   spec.authors       = ["soartec-lab"]
   spec.email         = ["info@soartec-lab.work"]
 
   spec.summary       = %q{Delete all thread local variables stored in `Thread.current`.}
   spec.description   = %q{Delete all thread local variables stored in `Thread.current`.}
-  spec.homepage      = "https://github.com/soartec-lab/reflesh_thread_current"
+  spec.homepage      = "https://github.com/soartec-lab/refresh_thread_current"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/soartec-lab/reflesh_thread_current"
-    spec.metadata["changelog_uri"] = "https://github.com/soartec-lab/reflesh_thread_current"
+    spec.metadata["source_code_uri"] = "https://github.com/soartec-lab/refresh_thread_current"
+    spec.metadata["changelog_uri"] = "https://github.com/soartec-lab/refresh_thread_current"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
